@@ -1,0 +1,22 @@
+
+
+.Head__wrapper{
+    width: 100%;
+    background-color: #212121;
+}
+.head__tools{
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+}
+.head__title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    /* identical to box height */
+    color: #FFFFFF;
+    margin-left: 10px;
+
+}
