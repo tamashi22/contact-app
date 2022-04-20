@@ -1,14 +1,16 @@
 import React from "react";
+import { Provider } from "react-redux";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-
+import ContactList from "./components/contactList/ContactList";
+import store from "./redux/store";
 function App() {
   return (
-    <div className="App">
-      <header>
-        <Header />
-      </header>
-    </div>
+    <Provider store={store}>
+      <Routes>
+        <Route path="/" element={<ContactList />} />
+      </Routes>
+    </Provider>
   );
 }
 

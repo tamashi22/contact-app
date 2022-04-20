@@ -1,0 +1,106 @@
+import {
+  DATA_GET_REQUEST,
+  DATA_GET_SUCCESS,
+  DATA_GET_FAIL,
+  SORT_A_Z,
+  SEARCH_CONTACT,
+  SORT_Z_A,
+  DISLIKE,
+  LIKE
+} from "./types";
+
+const initialState = {
+  data: [],
+  favorite: [],
+  loading: "false",
+  error: ""
+};
+const fileterAz = (a, b, i) => {
+  const name1 = a[i];
+  const name2 = b[i];
+  if (name1 < name2) {
+    return 1;
+  }
+  if (name1 > name2) {
+    return -1;
+  } else {
+    return 0;
+  }
+};
+const fileterZa = (a, b, i) => {
+  const name1 = a[i];
+  const name2 = b[i];
+  if (name1 < name2) {
+    return -1;
+  }
+  if (name1 > name2) {
+    return 1;
+  } else {
+    return 0;
+  }
+};
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case DATA_GET_REQUEST:
+      return {
+        ...state,
+        loading: true
+      };
+    case DATA_GET_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: action.payload,
+        error: ""
+      };
+    case DATA_GET_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        data: []
+      };
+    case SEARCH_CONTACT:
+      return {
+        ...state,
+        data: state.data.filter((item) => {
+          const firstLastName = item.firstName + " " + item.lastName;
+          return firstLastName
+            .toLowerCase()
+            .includes(action.payload.toLowerCase());
+        })
+      };
+    case LIKE:
+      return {
+        ...state,
+        favorite: [...state.favorites, action.payload]
+      };
+    case DISLIKE:
+      let element = state.favorite.filter(
+        (element) => element.id == action.payload.id
+      );
+      let favorite = state.favorite;
+      favorite.splice(state.favorite.indexOf(element[0]), 1);
+      return {
+        ...state,
+        favorite: favorite
+      };
+    case SORT_A_Z:
+      return {
+        ...state,
+        data: state.data.sort((a, b) => {
+          return fileterAz(a, b, "firstName");
+        })
+      };
+    case SORT_Z_A:
+      return {
+        ...state,
+        data: state.data.sort((a, b) => {
+          return fileterZa(a, b, "firstName");
+        })
+      };
+    default:
+      return state;
+  }
+};
+export default reducer;
