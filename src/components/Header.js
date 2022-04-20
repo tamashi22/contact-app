@@ -11,9 +11,9 @@ const Header = () => {
 
   return (
     <div className="Head__wrapper">
-      <div className="head__tools" onClick={nav}>
-        <img src={logo}></img>
-        <h1 className="head__title">MyContacts</h1>
+      <div className="head__tools" >
+        <img src={logo} alt="logo"></img>
+        <h1 className="head__title" onClick={nav}>MyContacts</h1>
       </div>
     </div>
   );

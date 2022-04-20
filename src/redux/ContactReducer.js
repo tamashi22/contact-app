@@ -15,7 +15,7 @@ const initialState = {
   loading: "false",
   error: ""
 };
-const fileterAz = (a, b, i) => {
+const filterAz = (a, b, i) => {
   const name1 = a[i];
   const name2 = b[i];
   if (name1 < name2) {
@@ -27,7 +27,7 @@ const fileterAz = (a, b, i) => {
     return 0;
   }
 };
-const fileterZa = (a, b, i) => {
+const filterZa = (a, b, i) => {
   const name1 = a[i];
   const name2 = b[i];
   if (name1 < name2) {
@@ -89,14 +89,14 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         data: state.data.sort((a, b) => {
-          return fileterAz(a, b, "firstName");
+          return filterAz(a, b, "firstName");
         })
       };
     case SORT_Z_A:
       return {
         ...state,
         data: state.data.sort((a, b) => {
-          return fileterZa(a, b, "firstName");
+          return filterZa(a, b, "firstName");
         })
       };
     default:
