@@ -1,0 +1,25 @@
+.main__wrapper{
+  max-width:80%;
+  margin:0 auto; 
+}
+.toolbar{
+  margin-top:47px;
+  display: flex;
+  justify-content:space-between;
+}
+.search__contact{
+  width: 551px;
+  border-radius: 2px;
+}
+.big__like{
+  margin-right:26px;
+  cursor: pointer;
+}
+.sort_AZ{
+  margin-right:20px;
+  cursor: pointer;
+  
+}
+.sort_ZA{
+  cursor: pointer;
+}
