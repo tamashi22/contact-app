@@ -9,6 +9,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
     margin-left: 30px;
+    
 }
 .head__title{
     font-family: 'Ubuntu', sans-serif;
@@ -18,5 +19,5 @@
     /* identical to box height */
     color: #FFFFFF;
     margin-left: 10px;
-
+    cursor: pointer;
 }

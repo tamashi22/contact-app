@@ -9,7 +9,7 @@
 }
 .search__contact{
   width: 551px;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 .big__like{
   margin-right:26px;
@@ -22,4 +22,16 @@
 }
 .sort_ZA{
   cursor: pointer;
+}
+.contacts__wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:50px;
+  margin-top: 50px;
+  justify-items: center;
+  align-items: center;
+
+
+
+
 }

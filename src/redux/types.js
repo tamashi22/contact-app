@@ -4,5 +4,5 @@ export const DATA_GET_FAIL = "DATA_GET_FAIL";
 export const SORT_A_Z = "SORT_A_Z";
 export const SORT_Z_A = "SORT_Z_A";
 export const SEARCH_CONTACT = "SEARCH_CONTACT";
-export const LIKE = "LIKE";
-export const DISLIKE = "DISLIKE";
+//export const LIKE = "LIKE";
+//export const DISLIKE = "DISLIKE";

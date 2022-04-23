@@ -1,0 +1,76 @@
+.contact__img{
+    width: 250px;
+    height: 134px;
+    border-radius: 4px 4px 0px 0px;
+}
+.contact__wrapper{
+    
+    width: 250px;
+    height: 303px;
+    box-shadow: 1px 1px 3px rgba(33, 33, 33, 0.25);
+    border-radius: 4px;
+
+}
+.contact__info{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.details__list{
+    list-style-type: none;
+    padding-left: 30px;
+}
+.adress{
+    list-style-image:url(../../images/location.svg);
+}
+.phone{
+    list-style-image:url(../../images/phone.svg);
+}
+.email{
+    list-style-image:url(../../images/email.svg);
+}
+.site{
+    list-style-image:url(../../images/site.svg);
+}
+.contact__title{
+    font-family: 'Ubuntu';
+font-style: normal  ;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+}
+.li{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 2px;
+}
+.red__like{
+    color: red;
+    cursor: pointer;
+}
+.white__like{
+    color: lightgray;
+    cursor: pointer;
+}
+.contact_button{
+    background: #212121;
+    border-radius: 4px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    float:right;
+    margin-right: 10px;
+    border:none;
+    height: 21px;
+    cursor: pointer;
+}
+
+
+  
+

@@ -5,8 +5,8 @@ import {
   SORT_A_Z,
   SEARCH_CONTACT,
   SORT_Z_A,
-  DISLIKE,
-  LIKE
+ // DISLIKE,
+  //LIKE
 } from "./types";
 const Url =
   "https://my-json-server.typicode.com/RomanChasovitin/demo-api/users";
@@ -43,7 +43,7 @@ export const searchContact = (payload) => {
     payload
   };
 };
-export const addFavorite = (payload) => {
+/*export const addFavorite = (payload) => {
   return {
     type: LIKE,
     payload
@@ -54,7 +54,7 @@ export const delFavorite = (payload) => {
     type: DISLIKE,
     payload
   };
-};
+};*/
 
 export const GetAllUsers = () => {
   return (dispach) => {

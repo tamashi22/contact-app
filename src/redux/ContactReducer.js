@@ -5,13 +5,13 @@ import {
   SORT_A_Z,
   SEARCH_CONTACT,
   SORT_Z_A,
-  DISLIKE,
-  LIKE
+ // DISLIKE,
+  //LIKE
 } from "./types";
 
 const initialState = {
   data: [],
-  favorite: [],
+  //favorite: [],
   loading: "false",
   error: ""
 };
@@ -70,10 +70,10 @@ const reducer = (state = initialState, action) => {
             .includes(action.payload.toLowerCase());
         })
       };
-    case LIKE:
+    /*case LIKE:
       return {
         ...state,
-        favorite: [...state.favorites, action.payload]
+        favorite: [...state.favorite, action.payload]
       };
     case DISLIKE:
       let element = state.favorite.filter(
@@ -84,7 +84,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         favorite: favorite
-      };
+      };*/
     case SORT_A_Z:
       return {
         ...state,
