@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header";
-import "antd/dist/antd.css";
+
 
 import { Spin } from "antd";
 import likeRed from "../../images/LikeRed.svg"
@@ -27,7 +27,7 @@ const ContactList = () => {
     if (fav) {
       const favList = localStorage.getItem("list");
       if (!favList) {
-        alert("U have no fav contacts");
+        alert("There is no Favourite contact");
       }
       console.log(favList);
     }
@@ -63,8 +63,8 @@ const ContactList = () => {
             onBlur={(e)=>blur(e.target.value)}/>
           <div className="filters">
             <img src={likeRed} className="big__like" alt="big__like" onClick={showFav}/>
-            <img src={sortAZ} className="sort_AZ" onClick={clickAzFilter} alt="sortAZ"/>                 
-            <img src={sortZA} className="sort_ZA" onClick={clickZaFilter} alt="sortZA"/> 
+            <img src={sortAZ} className="sort_AZ" onClick={clickZaFilter} alt="sortAZ"/>                 
+            <img src={sortZA} className="sort_ZA" onClick={clickAzFilter} alt="sortZA"/> 
           </div>
         </div>
         <div className="contacts__wrapper">
