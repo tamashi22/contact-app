@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header";
-
-
 import { Spin } from "antd";
 import likeRed from "../../images/LikeRed.svg"
 import sortAZ from "../../images/sortAZ.svg"

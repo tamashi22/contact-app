@@ -12,8 +12,8 @@ const ContactItem = () => {
         <div>
            <Header/> 
             
-        <div>
-        <img src={item.image} className="item__img"/>
+        <div className='item__wrapper'>
+        <img src={item.image} className="item__img" alt="img"/>
                <ContactForm/>
               
            </div>
