@@ -11,7 +11,7 @@ const validationSchema=Yup.object().shape({
     lastName: Yup.string().typeError('Must be string').required('This field is requred'),
     city: Yup.string().typeError('Must be string').required('This field is requred'),
     country: Yup.string().typeError('Must be string').required('This field is requred'),
-    phoneNumber: Yup.string().required('This field is requred').matches(/^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/,"Please, enter correct phone n umber"),
+    phoneNumber: Yup.string().required('This field is requred').matches(/^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/,"Please, enter correct phone number"),
     email: Yup.string().email("Invalid email").required("This field is requred"),
     website: Yup.string().required("This field is requred").matches(/((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,"Please, enter correct Url"),
 });
