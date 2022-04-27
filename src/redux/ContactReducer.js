@@ -7,6 +7,7 @@ import {
   SORT_Z_A,
  // DISLIKE,
   //LIKE
+   UPDATE_CONTACT
 } from "./types";
 
 const initialState = {
@@ -70,6 +71,15 @@ const reducer = (state = initialState, action) => {
             .includes(action.payload.toLowerCase());
         })
       };
+    case UPDATE_CONTACT:
+      console.log(action.payload);
+      const newData = state.data.map((item)=>item.id === action.payload.id ? action.payload : item)
+      console.log(newData)
+      localStorage.setItem('localData', JSON.stringify(newData));
+      
+      return{
+        ...state,
+        data: newData}
     /*case LIKE:
       return {
         ...state,

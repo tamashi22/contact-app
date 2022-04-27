@@ -20,6 +20,7 @@ const Contact = (item) => {
         localStorage.setItem("list", JSON.stringify(list));
       }
     };
+  
     return (
         <div>
          <div className="contact__wrapper">

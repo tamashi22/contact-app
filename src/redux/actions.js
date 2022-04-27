@@ -6,7 +6,8 @@ import {
   SEARCH_CONTACT,
   SORT_Z_A,
  // DISLIKE,
-  //LIKE
+  //LIKE]
+  UPDATE_CONTACT,
 } from "./types";
 const Url =
   "https://my-json-server.typicode.com/RomanChasovitin/demo-api/users";
@@ -43,6 +44,13 @@ export const searchContact = (payload) => {
     payload
   };
 };
+export const updateContact =(payload)=>{
+  return{
+    type:UPDATE_CONTACT,
+    payload,
+  }
+}
+
 /*export const addFavorite = (payload) => {
   return {
     type: LIKE,

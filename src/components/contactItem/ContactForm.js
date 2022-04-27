@@ -3,7 +3,8 @@ import "./Item.css";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useNavigate, useParams } from 'react-router-dom';
-import {  useSelector } from 'react-redux';
+import {  useSelector, useDispatch } from 'react-redux';
+import {updateContact} from '../../redux/actions';
 
 const validationSchema=Yup.object().shape({
     firstName: Yup.string().typeError('Must be string').required('This field is requred'),
@@ -19,9 +20,10 @@ const ContactForm = () => {
     const state=useSelector((state)=>state);
     const {id}= useParams();
     const navigate=useNavigate()
-    
-    const submit=()=>{
-        navigate("/")
+    const dispatch = useDispatch();
+    const submit= async (values)=>{
+      await dispatch(updateContact(values))
+      navigate("/");
     }
 
     return  (
@@ -37,6 +39,7 @@ const ContactForm = () => {
                     phoneNumber: item.phoneNumber,
                     email: item.email,
                     website: item.website,
+                    image: item.image
                 }}
                 validateOnBlur
                 onSubmit={submit}

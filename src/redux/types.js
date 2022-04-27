@@ -6,3 +6,4 @@ export const SORT_Z_A = "SORT_Z_A";
 export const SEARCH_CONTACT = "SEARCH_CONTACT";
 //export const LIKE = "LIKE";
 //export const DISLIKE = "DISLIKE";
+export const  UPDATE_CONTACT=" UPDATE_CONTACT"

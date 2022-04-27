@@ -45,7 +45,7 @@ const ContactList = () => {
   }
   const favList = JSON.parse(localStorage.getItem("list"));
   let dataList = fav ? state.data : favList;
-
+  
 
   return state.loading ?(
     <div className="loader"><Spin/></div>
@@ -73,7 +73,6 @@ const ContactList = () => {
               firstName={item.firstName}
               lastName={item.lastName}
               city={item.city}
-
               country={item.country}
               email={item.email}
               phoneNumber={item.phoneNumber}
